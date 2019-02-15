@@ -1,0 +1,72 @@
+body {
+  background: url('images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#modal-white {
+  margin: 24px 75px 0px 75px;
+  padding:75px 100px 24px 100px;
+}
+
+#stemmen-tracker {
+  padding: 24px 100px 24px 100px;
+  margin: 0px 75px;
+  border-top: 2px dotted gray;
+  background-color: lightgray !important;
+}
+
+#logo-stemmentracker {
+  width: 380px;
+  height: auto;
+  border-bottom: 2px solid transparent;
+}
+
+#logo-stemmentracker:hover {
+  border-bottom: 2px solid gray;
+  cursor: pointer;
+}
+
+#logo-stemwijzer {
+  width: 330px;
+  height: auto;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#h2-blue {
+  font-size: 20px;
+  font-weight: bold;
+  color: #01B4DC;
+}
+
+#p-with-logo {
+  width: 300px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 20px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#start-button {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 20px 50px;
+  transition: all .5s;
+}
+
+#start-button:hover {
+  background-color: #01B4DC !important;
+  color: white !important;
+}
