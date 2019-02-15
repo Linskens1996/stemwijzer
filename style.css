@@ -16,6 +16,12 @@ body {
   background-color: lightgray !important;
 }
 
+#div-blue {
+  padding: 24px 100px 24px 100px;
+  margin: 0px 75px 100px 75px;
+  background-color: #01B4DC;
+}
+
 #logo-stemmentracker {
   width: 380px;
   height: auto;
