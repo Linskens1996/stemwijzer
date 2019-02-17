@@ -1,27 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="style.css">
-  <title>StemWijzer</title>
-</head>
-<body id="body">
-  <div class="w3-container w3-white" id="modal-white">
-    <a href="index.html"><img src="images/logo-stemwijzer.svg" alt="Logo stemwijzer" id="logo-stemwijzer"></a>
-    <h1>StemWijzer Tweede Kamer 2019</h1>
-    <h2 id="h2-blue">Test uw politieke voorkeur aan de hand van 30 stellingen</h2>
-    <a href="#"><img src="images/icon-xsable.svg" alt="Logo toegankelijkheid" class="logo-icon"><p id="p-with-logo">Bekijk de toegankelijke versie voor mensen met een visuele beperking</p></a>
-    <button class="w3-button w3-margin" id="start-button">Start</button><br>
-    <a href="#"><img src="images/icon-lock.svg" alt="Logo privacy statement" class="logo-icon"><p id="p-with-logo">De StemWijzer maakt geen gebruik van cookies. Klik hier voor de volledige privacy statement</p></a>
-  </div>
-  <div class="w3-container w3-gray" id="stemmen-tracker">
-    <a href="https://www.stemmentracker.nl" target="_blank"><img src="images/logo-stemmentracker.svg" alt="Logo stemmentracker" id="logo-stemmentracker"></a>
-    <p>Wat hebben de partijen in het verleden waargemaakt van hun verkiezingsbeloften? 'Track' uw stem met de Stemmentracker, een website die terugblikt op 30 Tweede Kamerstemmingen van de afgelopen regeerperiode. Met welke partij stemde u mee?</p>
-  </div>
-  <div class="w3-container" id="div-blue">
-    <h1>TEST</h1>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="style.css">
+    <title>StemWijzer</title>
+  </head>
+  <body id="body">
+    <div class="w3-container w3-white" id="modal-white">
+      <div id="intro">
+        <a href="index.html"><img src="images/logo-stemwijzer.svg" alt="Logo stemwijzer" id="logo-stemwijzer"></a>
+        <h1>StemWijzer Tweede Kamer 2019</h1>
+        <h2 id="h2-blue">Test uw politieke voorkeur aan de hand van 30 stellingen</h2>
+        <a href="#"><img src="images/icon-xsable.svg" alt="Logo toegankelijkheid" class="logo-icon"><p id="p-with-logo">Bekijk de toegankelijke versie voor mensen met een visuele beperking</p></a>
+        <button onclick="startQuiz()" class="w3-button w3-margin" id="start-button">Start</button><br>
+        <a href="#"><img src="images/icon-lock.svg" alt="Logo privacy statement" class="logo-icon"><p id="p-with-logo">De StemWijzer maakt geen gebruik van cookies. Klik hier voor de volledige privacy statement</p></a>
+      </div>
+      <div id="question">
+        <button id="goBack" class="w3-circle"></button>
+        <h1 id="questionHeader"></h1>
+        <p id="questionVraag"></p>
+        <button id="eens"></button>
+        <button id="geen"></button>
+        <button id="oneens"></button>
+        <button id="slaOver"></button>
+      </div>
+    </div>
+    <div class="w3-container w3-gray" id="stemmen-tracker">
+      <a href="https://www.stemmentracker.nl" target="_blank"><img src="images/logo-stemmentracker.svg" alt="Logo stemmentracker" id="logo-stemmentracker"></a>
+      <p>Wat hebben de partijen in het verleden waargemaakt van hun verkiezingsbeloften? 'Track' uw stem met de Stemmentracker, een website die terugblikt op 30 Tweede Kamerstemmingen van de afgelopen regeerperiode. Met welke partij stemde u mee?</p>
+    </div>
+    <div class="w3-container" id="div-blue">
+      <img src="images/logo-1v.svg" alt="Logo 1 vandaag" id="logo-1v">
+      <p>Deze partijen doen mee</p>
+      <div class="parties">
+				<div class="party">
+					<a href="http://vvd.nl" target="_blank">
+            <img class="party__logo" src="logos/vvd.svg" alt="VVD" title="VVD">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://www.pvda.nl/verkiezingen/verkiezingsprogramma/" target="_blank">
+						<img class="party__logo" src="logos/pvda.svg" alt="PvdA" title="PvdA">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://pvv.nl/" target="_blank">
+						<img class="party__logo" src="logos/pvv.svg" alt="PVV" title="PVV">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://www.sp.nl/" target="_blank">
+						<img class="party__logo" src="logos/sp.svg" alt="SP" title="SP">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://www.cda.nl/" target="_blank">
+						<img class="party__logo" src="logos/cda.svg" alt="CDA" title="CDA">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://d66.nl" target="_blank">
+						<img class="party__logo" src="logos/d66.svg" alt="D66" title="D66">
+					</a>
+				</div>
+
+				<div class="party">
+					<a href="https://www.christenunie.nl/" target="_blank">
+						<img class="party__logo" src="logos/christenunie.svg" alt="ChristenUnie" title="ChristenUnie">
+					</a>
+				</div>
+
+				<div class="party">
+					<a href="https://groenlinks.nl/" target="_blank">
+						<img class="party__logo" src="logos/groenlinks.svg" alt="GroenLinks" title="GroenLinks">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://www.sgp.nl/" target="_blank">
+						<img class="party__logo" src="logos/sgp.svg" alt="SGP" title="SGP">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://www.partijvoordedieren.nl/" target="_blank">
+						<img class="party__logo" src="logos/pvdd.svg" alt="Partij voor de Dieren" title="Partij voor de Dieren">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://50pluspartij.nl/" target="_blank">
+						<img class="party__logo" src="logos/50plus.svg" alt="50Plus" title="50Plus">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.ondernemerspartij.nl" target="_blank">
+						<img class="party__logo" src="logos/ondernemerspartij.png" alt="OndernemersPartij" title="OndernemersPartij">
+					</a>
+				</div>
+	
+				<div class="party">
+					<a href="http://vnl.nu" target="_blank">
+						<img class="party__logo" src="logos/vnl.svg" alt="VNL" title="VNL">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://www.bewegingdenk.nl/" target="_blank">
+						<img class="party__logo" src="logos/denk.svg" alt="DENK" title="DENK">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://nieuwewegen.nu" target="_blank">
+						<img class="party__logo" src="logos/nieuwewegen.png" alt="Nieuwe Wegen" title="Nieuwe Wegen">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://forumvoordemocratie.nl/" target="_blank">
+						<img class="party__logo" src="logos/forumvoordemocratie.png" alt="Forum voor Democratie" title="Forum voor Democratie">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.deburgerbeweging.nl/" target="_blank">
+						<img class="party__logo" src="logos/burgerbeweging (2).png" alt="De Burger Beweging" title="De Burger Beweging">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.vrijzinnigepartij.nl" target="_blank">
+						<img class="party__logo" src="logos/vrijzinnigepartij.png" alt="Vrijzinnige Partij" title="Vrijzinnige Partij">
+					</a>
+				</div>
+
+				<div class="party">
+					<a href="https://piratenpartij.nl/" target="_blank">
+						<img class="party__logo" src="logos/piratenpartij.svg" alt="Piratenpartij" title="Piratenpartij">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.artikel1.org" target="_blank">
+						<img class="party__logo" src="logos/artikel1.png" alt="Artikel 1" title="Artikel 1">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.nietstemmers.nl" target="_blank">
+						<img class="party__logo" src="logos/nietstemmers.svg" alt="Niet Stemmers" title="Niet Stemmers">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.stemlp.nl" target="_blank">
+						<img class="party__logo" src="logos/libertarischepartij.svg" alt="Libertarische Partij" title="Libertarische Partij">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://lokaalindekamer.nl" target="_blank">
+						<img class="party__logo" src="logos/lokaalindekamer.svg" alt="Lokaal in de Kamer" title="Lokaal in de Kamer">
+					</a>
+				</div>
+			</div>
+      <p>Deze partijen doen niet mee</p>
+      <div class="parties">
+				<div class="party">
+  				<a href="https://www.geenpeil.nl" target="_blank">
+						<img class="party__logo" src="logos/geenpeil.png" alt="Geen Peil" title="Geen Peil">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="http://www.jezusleeft.nl/" target="_blank">
+						<img class="party__logo" src="logos/jezusleeft.png" alt="Jezus Leeft" title="Jezus Leeft">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://stemnl.nl/web/Pages/index.html" target="_blank">
+						<img class="party__logo" src="logos/stemnl.png" alt="StemNL" title="StemNL">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://sites.google.com/site/parasolpartijenstartpagina/" target="_blank">
+						<img class="party__logo" src="logos/mensspirit.png" alt="MenS en Spirit/Basisinkomen Partij/V-R" title="MenS en Spirit">
+					</a>
+				</div>
+		
+				<div class="party">
+					<a href="https://deverkiezingswijzer.nl/politieke-partij/vrije-democratische-partij/" target="_blank">
+						<img class="party__logo" src="logos/vdp.png" alt="Vrije Democratische Partij" title="Vrije Democratische Partij">
+					</a>
+				</div>
+			</div>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

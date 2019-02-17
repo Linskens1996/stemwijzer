@@ -1,7 +1,7 @@
 body {
   background: url('images/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
+  background-attachment: fixed;
 }
 
 #modal-white {
@@ -20,6 +20,9 @@ body {
   padding: 24px 100px 24px 100px;
   margin: 0px 75px 100px 75px;
   background-color: #01B4DC;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 #logo-stemmentracker {
@@ -75,4 +78,62 @@ h1 {
 #start-button:hover {
   background-color: #01B4DC !important;
   color: white !important;
+}
+
+#logo-1v {
+  width: 175px;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.parties {
+  justify-content: flex-start;
+  margin-bottom: 1em;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.party {
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin: 0 14px 18px 0;
+  background: white;
+  border-radius: 50px;
+  transition: transform .2s ease;
+}
+
+.party__logo {
+  width: 80%;
+  height: 80%;
+  margin: 10% 0 0 10%;
+  background-position: center center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
+#question {
+  display: none;
+}
+
+#goBack {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-image: url(images/icon-arrow-back.svg);
+  background-color: #E7EAEB;
+  border-radius: 50px;
+  transition: transform .2s;
+  position: relative;
+  bottom: 55px;
+  right: 80px;
+}
+
+#goBack:hover {
+  cursor: pointer;
+}
+
+#questionHeader {
+  color: #01B4DC;
 }
