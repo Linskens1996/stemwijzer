@@ -1,17 +1,37 @@
 var noDisplay = "display:none;",
-    yesDisplay = "display:block";
+    yesDisplay = "display:block",
+    idIntro = document.getElementById("intro"),
+    idStemmenTracker = document.getElementById("stemmen-tracker"),
+    idDivBlue = document.getElementById("div-blue"),
+    idQuestion = document.getElementById("question"),
+    idQuestionHeader = document.getElementById("questionHeader"),
+    idQuestionVraag = document.getElementById("questionVraag"),
+    answers = [],
+    i = 0;
 
 function startQuiz() {
-  document.getElementById("intro").style = noDisplay;
-  document.getElementById("stemmen-tracker").style = noDisplay;
-  document.getElementById("div-blue").style = noDisplay;
-  document.getElementById("question").style = yesDisplay;
+  idIntro.style = noDisplay;
+  idStemmenTracker.style = noDisplay;
+  idDivBlue.style = noDisplay;
+  idQuestion.style = yesDisplay;
 
-  document.getElementById("goBack").
-
-  document.getElementById("questionHeader").innerHTML = "1. " + subjects[0].title;
-  document.getElementById("questionVraag").innerHTML = subjects[0].statement;
+  idQuestionHeader.innerHTML = i + 1 + ". " + subjects[i].title;
+  idQuestionVraag.innerHTML = subjects[i].statement;
 };
 
-console.log(subjects[0].title);
-console.log(parties[0].name);
+function goToHome() {
+  idIntro.style = yesDisplay;
+  idStemmenTracker.style = yesDisplay;
+  idDivBlue.style = yesDisplay;
+  idQuestion.style = noDisplay;
+};
+
+function nextQuestion() {
+  i++;
+  idQuestionHeader.innerHTML = i + 1 + ". " + subjects[i].title;
+  idQuestionVraag.innerHTML = subjects[i].statement;
+};
+
+function eens() {
+  nextQuestion()
+};

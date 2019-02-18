@@ -114,6 +114,7 @@ h1 {
 
 #question {
   display: none;
+  font-size: 24px;
 }
 
 #goBack {
@@ -136,4 +137,38 @@ h1 {
 
 #questionHeader {
   color: #01B4DC;
+  font-size: 32px;
+  padding-bottom: 40px;
+}
+
+#questionVraag {
+  padding-bottom: 70px;
+  min-height: 142px;
+}
+
+#slaOver {
+  float: right;
+  font-weight: bold;
+  color: gray;
+  border-radius: 5px;
+  line-height: 48px;
+  vertical-align: middle;
+}
+
+.questionAnswer {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 20px 50px;
+  border-radius: 5px;
+}
+
+.questionAnswer:hover {
+  background-color: #01B4DC !important;
+  color: white !important;
+  transition: all .5s;
+}
+
+#questionButtons {
+  font-size: 16px;
 }

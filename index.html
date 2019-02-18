@@ -18,13 +18,15 @@
         <a href="#"><img src="images/icon-lock.svg" alt="Logo privacy statement" class="logo-icon"><p id="p-with-logo">De StemWijzer maakt geen gebruik van cookies. Klik hier voor de volledige privacy statement</p></a>
       </div>
       <div id="question">
-        <button id="goBack" class="w3-circle"></button>
+        <button id="goBack" class="w3-circle" onclick=goToHome()></button>
         <h1 id="questionHeader"></h1>
         <p id="questionVraag"></p>
-        <button id="eens"></button>
-        <button id="geen"></button>
-        <button id="oneens"></button>
-        <button id="slaOver"></button>
+        <div id="questionButtons">
+          <button id="eens" class="w3-button questionAnswer" onclick="eens()">Eens</button>
+          <button id="geen" class="w3-button questionAnswer">Geen van beide</button>
+          <button id="oneens" class="w3-button questionAnswer">Oneens</button>
+          <button id="slaOver" class="w3-button" onclick="nextQuestion()">Sla deze vraag over &rarr;</button>
+        </div>
       </div>
     </div>
     <div class="w3-container w3-gray" id="stemmen-tracker">
