@@ -14,18 +14,49 @@
         <h1>StemWijzer Tweede Kamer 2019</h1>
         <h2 id="h2-blue">Test uw politieke voorkeur aan de hand van 30 stellingen</h2>
         <a href="#"><img src="images/icon-xsable.svg" alt="Logo toegankelijkheid" class="logo-icon"><p id="p-with-logo">Bekijk de toegankelijke versie voor mensen met een visuele beperking</p></a>
-        <button onclick="startQuiz()" class="w3-button w3-margin" id="start-button">Start</button><br>
+        <button onclick="startQuiz()" class="w3-button big-btn" id="start-button">Start</button><br>
         <a href="#"><img src="images/icon-lock.svg" alt="Logo privacy statement" class="logo-icon"><p id="p-with-logo">De StemWijzer maakt geen gebruik van cookies. Klik hier voor de volledige privacy statement</p></a>
       </div>
       <div id="question">
-        <button id="goBack" class="w3-circle"></button>
-        <h1 id="questionHeader"></h1>
-        <p id="questionVraag"></p>
+        <button id="goBack" class="w3-circle go-back-btn"></button>
+        <h1 id="questionHeader" class="blueHeader"></h1>
+        <p id="questionVraag" class="bigPFont"></p>
         <div id="questionButtons">
           <button id="eens" class="w3-button questionAnswer" onclick="answerFunc(1)">Eens</button>
           <button id="geen" class="w3-button questionAnswer" onclick="answerFunc(2)">Geen van beide</button>
           <button id="oneens" class="w3-button questionAnswer" onclick="answerFunc(3)">Oneens</button>
           <button id="slaOver" class="w3-button" onclick="answerFunc(4)">Sla deze vraag over &rarr;</button>
+        </div>
+      </div>
+      <div id="belangrijke-stelling">
+        <button id="goBackToQ" class="w3-circle go-back-btn"></button>
+        <h1 class="blueHeader">Zijn er onderwerpen die u extra belangrijk vindt?</h1>
+        <p id="imp-stellingen">Aangevinkte stellingen tellen extra mee bij het berekenen van het resulaat.</p>
+        <button class="w3-button big-btn" id="ga-verder-btn" onclick="toResults()">Ga verder</button>
+        <div>
+          <ul id="myForm">
+            <li><input type="checkbox" id="0" class="w3-check" name="Bindend referendum"> Bindend referendum</li>
+            <li><input type="checkbox" id="1" class="w3-check" name="Maatschappelijke dienstplicht"> Maatschappelijke dienstplicht</li>
+            <li><input type="checkbox" id="2" class="w3-check" name="Anoniem solliciteren"> Anoniem solliciteren</li>
+            <li><input type="checkbox" id="3" class="w3-check" name="Groepsbelediging"> Groepsbelediging</li>
+            <li><input type="checkbox" id="4" class="w3-check" name="Teelt en verkoop wiet"> Teelt en verkoop wiet</li>
+            <li><input type="checkbox" id="5" class="w3-check" name="Vervroegde vrijlating"> Vervroegde vrijlating</li>
+            <li><input type="checkbox" id="6" class="w3-check" name="Vennootschapsbelasting"> Vennootschapsbelasting</li>
+          </ul>
+        </div>
+      </div>
+      <div id="resultsPage">
+        <button id="backToStellingen" class="w3-circle go-back-btn" onclick="toBelangrijkeStelling()"></button>
+        <h1 class="blueHeader">Resultaat</h1>
+        <ol>
+          <li id="li1"></li>
+          <li id="li2"></li>
+          <li id="li3"></li>
+        </ol>
+        <div id="three-btn">
+          <button class="w3-button w3-btn" onclick="allParties()">Alle partijen</button>
+          <button class="w3-button w3-btn" onclick="bigParties()">Grote partijen</button>
+          <button class="w3-button w3-btn" onclick="smallParties()">Seculiere partijen</button>
         </div>
       </div>
     </div>

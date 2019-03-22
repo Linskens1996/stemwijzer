@@ -4,6 +4,24 @@ body {
   background-attachment: fixed;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 16px;
+}
+
+ol {
+  font-size: 16px;
+}
+
+li {
+  vertical-align: middle;
+}
+
+#three-btn {
+  padding-top: 16px;
+}
+
 #modal-white {
   margin: 24px 75px 0px 75px;
   padding:75px 100px 24px 100px;
@@ -64,7 +82,7 @@ h1 {
   height: 40px;
 }
 
-#start-button {
+.big-btn {
   float: right;
   font-size: 24px;
   font-weight: bold;
@@ -75,7 +93,7 @@ h1 {
   transition: all .5s;
 }
 
-#start-button:hover {
+.big-btn:hover {
   background-color: #01B4DC !important;
   color: white !important;
 }
@@ -117,7 +135,17 @@ h1 {
   font-size: 24px;
 }
 
-#goBack {
+#belangrijke-stelling {
+  display: none;
+  font-size: 24px;
+}
+
+#resultsPage {
+  display: none;
+  font-size: 24px;
+}
+
+.go-back-btn {
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
@@ -131,19 +159,23 @@ h1 {
   right: 80px;
 }
 
-#goBack:hover {
+.go-back-btn:hover {
   cursor: pointer;
 }
 
-#questionHeader {
+.blueHeader {
   color: #01B4DC;
   font-size: 32px;
   padding-bottom: 40px;
 }
 
-#questionVraag {
+.bigPFont {
   padding-bottom: 70px;
   min-height: 142px;
+}
+
+#imp-stellingen {
+  min-height: 70px;
 }
 
 #slaOver {
